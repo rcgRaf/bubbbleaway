@@ -58,7 +58,6 @@ func get_bubble_scale() -> Vector2:
 	
 func set_bubble_scale(new_scale: Vector2):
 	collision_shape.scale = new_scale
-	collision_shape.scale = new_scale
 
 func handle_horizontal_movement(delta):
 	var direction := Input.get_axis("ui_left", "ui_right")
