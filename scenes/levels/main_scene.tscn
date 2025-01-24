@@ -3,10 +3,11 @@
 [ext_resource type="PackedScene" uid="uid://bbwdrl2v6xq4g" path="res://scenes/environment/walls.tscn" id="1_fheeb"]
 [ext_resource type="PackedScene" uid="uid://ksvvqbt444m" path="res://scenes/entities/bubble.tscn" id="2_dk1o0"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Game" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("2_dk1o0")]
-position = Vector2(153, 530)
+position = Vector2(135, 491)
+scale = Vector2(1.715, 1.715)
 
 [node name="Node2D" parent="." instance=ExtResource("1_fheeb")]
 position = Vector2(-1, 710)
