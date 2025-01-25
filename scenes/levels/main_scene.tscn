@@ -1,13 +1,20 @@
-[gd_scene load_steps=3 format=3 uid="uid://kb0vxf65ltfk"]
+[gd_scene load_steps=4 format=3 uid="uid://kb0vxf65ltfk"]
 
 [ext_resource type="PackedScene" uid="uid://bbwdrl2v6xq4g" path="res://scenes/environment/walls.tscn" id="1_fheeb"]
 [ext_resource type="PackedScene" uid="uid://ksvvqbt444m" path="res://scenes/entities/bubble.tscn" id="2_dk1o0"]
+
+[sub_resource type="Curve" id="Curve_wf4hs"]
+min_value = 0.1
+max_value = 5.0
+_data = [Vector2(0, 4.96275), 0.0, 0.0, 0, 0, Vector2(0.93049, 0.802006), -5.03014, -5.03014, 0, 0, Vector2(0.969984, 0.382207), -13.6757, -13.6757, 0, 0, Vector2(0.995261, 0.0272207), -23.5999, 0.0, 0, 0]
+point_count = 4
 
 [node name="Game" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("2_dk1o0")]
 position = Vector2(135, 491)
 scale = Vector2(1.715, 1.715)
+blowdown_curve = SubResource("Curve_wf4hs")
 
 [node name="Node2D" parent="." instance=ExtResource("1_fheeb")]
 position = Vector2(-1, 710)
