@@ -21,7 +21,7 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 	
-	handle_horizontal_movement(delta)
+	handle_horizontal_movement()
 	handle_bubble_scale(delta)
 	
 	upwards_force = get_bubble_scale().length()
@@ -59,7 +59,7 @@ func get_bubble_scale() -> Vector2:
 func set_bubble_scale(new_scale: Vector2):
 	collision_shape.scale = new_scale
 
-func handle_horizontal_movement(delta):
+func handle_horizontal_movement():
 	var direction := Input.get_axis("ui_left", "ui_right")
 	if direction:
 		velocity.x = direction * SPEED
