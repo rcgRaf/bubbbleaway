@@ -7,6 +7,54 @@ class_name PlayerController
 @export var num : float
 @export var blowdown_curve: Curve
 
+var health = 1
+const max_health = 10
+
+func take_damage(amount: int):
+	health -= amount
+	if health < 0:
+		die()
+		#health = 5
+	start_squish_animation()
+	print("taking damage")
+
+func heal(amount: int):
+	health = min(health + amount, max_health)
+	start_squish_animation()
+	print("healing")
+
+func die():
+	print("you died")
+	pass
+
+
+
+
+@onready var bubble_sprite:= $BubbleCollisionShape # $AnimatedSprite2D
+#@onready var character_anim_sprite:= $AnimatedSprite2D
+@export var animation_curve: Curve
+@onready var DEFAULT_SCALE: Vector2 = bubble_sprite.scale
+@onready var SQUISH_SCALE: Vector2 = DEFAULT_SCALE * 2.0
+const ANIMATION_DURATION := 0.5
+var animation_time_passed := 0.0
+var is_animating := false
+
+func start_squish_animation():
+	is_animating = true
+	animation_time_passed = 0.0
+	DEFAULT_SCALE = bubble_sprite.scale
+	SQUISH_SCALE = Vector2(1,1) * health * 0.5
+
+func play_squish_animation(delta):
+	if is_animating:
+		animation_time_passed += delta
+		bubble_sprite.scale = DEFAULT_SCALE.lerp(SQUISH_SCALE, animation_curve.sample(animation_time_passed / ANIMATION_DURATION))
+		
+		if animation_time_passed >= ANIMATION_DURATION:
+			animation_time_passed = 0.0
+			is_animating = false
+
+
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 const ORIGINAL_SCALE_SPEED = 2.0
@@ -19,14 +67,28 @@ var is_scaling_up = false  # Whether the object is scaling up
 
 var upwards_force := 0.0
 
+var is_looking_right = true
+
+
+func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("ui_wp"):
+		heal(1)
+	elif Input.is_action_just_pressed("ui_down"):
+		take_damage(1)
+		
+	#if Input.is_action_just_pressed("ui_accept"):
+		#start_squish_animation()
+	play_squish_animation(delta)
+	#character_anim_sprite.flip_h = false if is_looking_right else true
+
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 	
 	handle_horizontal_movement()
-	handle_bubble_scale(delta)
+	#handle_bubble_scale(delta)
 	
-	upwards_force = get_bubble_scale().length()
+	upwards_force = (health - 5) # get_bubble_scale().length() - 5.0
 	velocity.y -= upwards_force * 10
 	
 	var collision_info = move_and_collide(velocity * delta)
@@ -68,5 +130,6 @@ func handle_horizontal_movement():
 	var direction := Input.get_axis("ui_left", "ui_right")
 	if direction:
 		velocity.x = direction * SPEED
+		is_looking_right = true if direction > 0.0 else false
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)

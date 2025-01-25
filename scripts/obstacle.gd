@@ -1,7 +1,14 @@
 extends Area2D
 
+@export var damage:= 5
+var is_enabled = true
+
+func set_active():
+	is_enabled = true
+
 func _on_body_entered(body: Node2D) -> void:
-	if body is PlayerController:
+	if is_enabled and body is PlayerController:
+		is_enabled = false
 		var playerBubble = body as PlayerController
-		playerBubble.set_bubble_scale(playerBubble.get_bubble_scale() / 2.0)
-	pass # Replace with function body.
+		playerBubble.take_damage(damage)
+		$Timer.start(3)
