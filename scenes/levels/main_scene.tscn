@@ -5,9 +5,8 @@
 
 [sub_resource type="Curve" id="Curve_wf4hs"]
 min_value = 0.1
-max_value = 5.0
-_data = [Vector2(0, 4.96275), 0.0, 0.0, 0, 0, Vector2(0.93049, 0.802006), -5.03014, -5.03014, 0, 0, Vector2(0.969984, 0.382207), -13.6757, -13.6757, 0, 0, Vector2(0.995261, 0.0272207), -23.5999, 0.0, 0, 0]
-point_count = 4
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.955766, 0.295989), -1.02889, -1.02889, 0, 0, Vector2(0.99684, 0.1), -2.13163, -13.6757, 0, 0]
+point_count = 3
 
 [node name="Game" type="Node2D"]
 
@@ -15,7 +14,6 @@ point_count = 4
 position = Vector2(135, 491)
 scale = Vector2(1.715, 1.715)
 blowdown_curve = SubResource("Curve_wf4hs")
-
 
 [node name="Floor" type="Node2D" parent="."]
 position = Vector2(-2297, 779)

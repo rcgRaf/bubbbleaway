@@ -9,7 +9,7 @@ const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 const ORIGINAL_SCALE_SPEED = 2.0
 @onready var ORIGINAL_SCALE = get_bubble_scale() # Vector2(1.0, 1.0)  # Original scale of the object
-@onready var MAX_SCALE = ORIGINAL_SCALE * 5 #Vector2(1.0, 1.0) * 5  # Original scale of the object
+@onready var MAX_SCALE = ORIGINAL_SCALE * 3 #Vector2(1.0, 1.0) * 5  # Original scale of the object
 @onready var MIN_SCALE = ORIGINAL_SCALE * 0.3 #Vector2(1.0, 1.0) * 0.3
 const SCALE_SPEED = 2.0  # Speed of scaling
 var TARGET_SCALE = scale  # Target scale when key is pressed
@@ -25,7 +25,7 @@ func _physics_process(delta: float) -> void:
 	handle_bubble_scale(delta)
 	
 	upwards_force = get_bubble_scale().length()
-	velocity.y -= upwards_force * 10
+	velocity.y -= upwards_force * 5
 	
 	var collision_info = move_and_collide(velocity * delta)
 	if collision_info:
@@ -33,15 +33,16 @@ func _physics_process(delta: float) -> void:
 		move_and_slide()
 	
 func handle_bubble_scale(delta):
-	if Input.is_action_just_pressed("ui_accept"):
+	var curr_scale = get_bubble_scale()
+	if Input.is_action_pressed("ui_accept"):
 		is_scaling_up = true
-		TARGET_SCALE = TARGET_SCALE * 1.2
+		TARGET_SCALE = curr_scale + Vector2(0.05,0.05)
 		if TARGET_SCALE > MAX_SCALE:
 			TARGET_SCALE = MAX_SCALE
+		set_bubble_scale(TARGET_SCALE)
+		curr_scale = get_bubble_scale()
 	
-	var curr_scale = get_bubble_scale()
 	if is_scaling_up:
-		curr_scale = curr_scale.slerp(TARGET_SCALE, SCALE_SPEED * delta)
 		if curr_scale.distance_to(TARGET_SCALE) < 0.01:
 			curr_scale = TARGET_SCALE  # Snap to target scale
 			is_scaling_up = false
@@ -53,9 +54,12 @@ func handle_bubble_scale(delta):
 			var curveCurrentPointY = blowdown_curve.sample(scaleRatioY)
 			var curvePointX = blowdown_curve.sample(scaleRatioX+delta)
 			var curvePointY = blowdown_curve.sample(scaleRatioY+delta)
-			var diffX = curveCurrentPointX-curvePointX
-			var diffY = curveCurrentPointY-curvePointY
-			curr_scale = Vector2(curr_scale.x-diffX*0.1,curr_scale.y-diffY*0.1)
+			var diffX = MAX_SCALE.x*(curveCurrentPointX-curvePointX)
+			var diffY = MAX_SCALE.y*(curveCurrentPointY-curvePointY)
+			
+			print_debug("diff",diffX)
+			print_debug("diff",diffX)
+			curr_scale = Vector2(curr_scale.x-diffX,curr_scale.y-diffY)
 		else:
 			curr_scale = MIN_SCALE  # Snap to original scale
 	set_bubble_scale(curr_scale)
