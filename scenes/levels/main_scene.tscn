@@ -13,11 +13,9 @@ point_count = 4
 
 [node name="Player" parent="." instance=ExtResource("2_dk1o0")]
 position = Vector2(135, 491)
-<<<<<<< HEAD
 scale = Vector2(1.715, 1.715)
 blowdown_curve = SubResource("Curve_wf4hs")
-=======
->>>>>>> 96fdb45502a9339f0a587bc792cece0cbdcdf79a
+
 
 [node name="Floor" type="Node2D" parent="."]
 position = Vector2(-2297, 779)
