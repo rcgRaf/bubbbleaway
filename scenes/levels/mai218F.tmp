@@ -6,9 +6,8 @@
 [node name="Game" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("2_dk1o0")]
-position = Vector2(241, 475)
-scale = Vector2(1.15509, 1.14047)
-blowdown_curve = null
+position = Vector2(135, 491)
+scale = Vector2(1.715, 1.715)
 
 [node name="Node2D" parent="." instance=ExtResource("1_fheeb")]
 position = Vector2(-1, 710)
