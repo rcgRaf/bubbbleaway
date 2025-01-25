@@ -13,43 +13,15 @@ point_count = 4
 
 [node name="Player" parent="." instance=ExtResource("2_dk1o0")]
 position = Vector2(135, 491)
+<<<<<<< HEAD
 scale = Vector2(1.715, 1.715)
 blowdown_curve = SubResource("Curve_wf4hs")
-
-[node name="Node2D" parent="." instance=ExtResource("1_fheeb")]
-position = Vector2(-1, 710)
-
-[node name="Ceiling2" type="Node2D" parent="."]
-
-[node name="Node2D12" parent="Ceiling2" instance=ExtResource("1_fheeb")]
-position = Vector2(1, 71)
-
-[node name="Node2D13" parent="Ceiling2" instance=ExtResource("1_fheeb")]
-position = Vector2(127, 71)
-
-[node name="Node2D14" parent="Ceiling2" instance=ExtResource("1_fheeb")]
-position = Vector2(256, 72)
-
-[node name="Node2D15" parent="Ceiling2" instance=ExtResource("1_fheeb")]
-position = Vector2(384, 73)
-
-[node name="Node2D16" parent="Ceiling2" instance=ExtResource("1_fheeb")]
-position = Vector2(512, 74)
-
-[node name="Node2D17" parent="Ceiling2" instance=ExtResource("1_fheeb")]
-position = Vector2(637, 74)
-
-[node name="Node2D18" parent="Ceiling2" instance=ExtResource("1_fheeb")]
-position = Vector2(765, 74)
-
-[node name="Node2D19" parent="Ceiling2" instance=ExtResource("1_fheeb")]
-position = Vector2(893, 74)
-
-[node name="Node2D20" parent="Ceiling2" instance=ExtResource("1_fheeb")]
-position = Vector2(1021, 74)
+=======
+>>>>>>> 96fdb45502a9339f0a587bc792cece0cbdcdf79a
 
 [node name="Floor" type="Node2D" parent="."]
-position = Vector2(-1, 710)
+position = Vector2(-2297, 779)
+scale = Vector2(5.2, 1)
 
 [node name="Node2D2" parent="Floor" instance=ExtResource("1_fheeb")]
 position = Vector2(126, 0)
@@ -77,3 +49,677 @@ position = Vector2(1018, 3)
 
 [node name="Node2D10" parent="Floor" instance=ExtResource("1_fheeb")]
 position = Vector2(1146, 3)
+
+[node name="Floor2" type="Node2D" parent="."]
+position = Vector2(-2770, -16962)
+scale = Vector2(5.2, 1)
+
+[node name="Node2D2" parent="Floor2" instance=ExtResource("1_fheeb")]
+position = Vector2(126, 0)
+
+[node name="Node2D3" parent="Floor2" instance=ExtResource("1_fheeb")]
+position = Vector2(252, 0)
+
+[node name="Node2D4" parent="Floor2" instance=ExtResource("1_fheeb")]
+position = Vector2(381, 1)
+
+[node name="Node2D5" parent="Floor2" instance=ExtResource("1_fheeb")]
+position = Vector2(509, 2)
+
+[node name="Node2D6" parent="Floor2" instance=ExtResource("1_fheeb")]
+position = Vector2(637, 3)
+
+[node name="Node2D7" parent="Floor2" instance=ExtResource("1_fheeb")]
+position = Vector2(762, 3)
+
+[node name="Node2D8" parent="Floor2" instance=ExtResource("1_fheeb")]
+position = Vector2(890, 3)
+
+[node name="Node2D9" parent="Floor2" instance=ExtResource("1_fheeb")]
+position = Vector2(1018, 3)
+
+[node name="Node2D10" parent="Floor2" instance=ExtResource("1_fheeb")]
+position = Vector2(1146, 3)
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Ceiling2" type="Node2D" parent="Node2D"]
+position = Vector2(458, -79)
+
+[node name="Node2D12" parent="Node2D/Ceiling2" instance=ExtResource("1_fheeb")]
+position = Vector2(1, 71)
+
+[node name="Node2D13" parent="Node2D/Ceiling2" instance=ExtResource("1_fheeb")]
+position = Vector2(127, 71)
+
+[node name="Node2D14" parent="Node2D/Ceiling2" instance=ExtResource("1_fheeb")]
+position = Vector2(256, 72)
+
+[node name="Node2D15" parent="Node2D/Ceiling2" instance=ExtResource("1_fheeb")]
+position = Vector2(384, 73)
+
+[node name="Node2D16" parent="Node2D/Ceiling2" instance=ExtResource("1_fheeb")]
+position = Vector2(512, 74)
+
+[node name="Node2D17" parent="Node2D/Ceiling2" instance=ExtResource("1_fheeb")]
+position = Vector2(637, 74)
+
+[node name="Node2D18" parent="Node2D/Ceiling2" instance=ExtResource("1_fheeb")]
+position = Vector2(765, 74)
+
+[node name="Node2D19" parent="Node2D/Ceiling2" instance=ExtResource("1_fheeb")]
+position = Vector2(893, 74)
+
+[node name="Node2D20" parent="Node2D/Ceiling2" instance=ExtResource("1_fheeb")]
+position = Vector2(1021, 74)
+
+[node name="Ceiling3" type="Node2D" parent="Node2D"]
+position = Vector2(-933, -804)
+
+[node name="Node2D12" parent="Node2D/Ceiling3" instance=ExtResource("1_fheeb")]
+position = Vector2(1, 71)
+
+[node name="Node2D13" parent="Node2D/Ceiling3" instance=ExtResource("1_fheeb")]
+position = Vector2(127, 71)
+
+[node name="Node2D14" parent="Node2D/Ceiling3" instance=ExtResource("1_fheeb")]
+position = Vector2(256, 72)
+
+[node name="Node2D15" parent="Node2D/Ceiling3" instance=ExtResource("1_fheeb")]
+position = Vector2(384, 73)
+
+[node name="Node2D16" parent="Node2D/Ceiling3" instance=ExtResource("1_fheeb")]
+position = Vector2(512, 74)
+
+[node name="Node2D17" parent="Node2D/Ceiling3" instance=ExtResource("1_fheeb")]
+position = Vector2(637, 74)
+
+[node name="Node2D18" parent="Node2D/Ceiling3" instance=ExtResource("1_fheeb")]
+position = Vector2(765, 74)
+
+[node name="Node2D19" parent="Node2D/Ceiling3" instance=ExtResource("1_fheeb")]
+position = Vector2(893, 74)
+
+[node name="Node2D20" parent="Node2D/Ceiling3" instance=ExtResource("1_fheeb")]
+position = Vector2(1021, 74)
+
+[node name="Ceiling4" type="Node2D" parent="Node2D"]
+position = Vector2(-909, 774)
+rotation = -1.5708
+scale = Vector2(15.5157, -1.78466)
+
+[node name="Node2D12" parent="Node2D/Ceiling4" instance=ExtResource("1_fheeb")]
+position = Vector2(1, 71)
+
+[node name="Node2D13" parent="Node2D/Ceiling4" instance=ExtResource("1_fheeb")]
+position = Vector2(127, 71)
+
+[node name="Node2D14" parent="Node2D/Ceiling4" instance=ExtResource("1_fheeb")]
+position = Vector2(256, 72)
+
+[node name="Node2D15" parent="Node2D/Ceiling4" instance=ExtResource("1_fheeb")]
+position = Vector2(384, 73)
+
+[node name="Node2D16" parent="Node2D/Ceiling4" instance=ExtResource("1_fheeb")]
+position = Vector2(512, 74)
+
+[node name="Node2D17" parent="Node2D/Ceiling4" instance=ExtResource("1_fheeb")]
+position = Vector2(637, 74)
+
+[node name="Node2D18" parent="Node2D/Ceiling4" instance=ExtResource("1_fheeb")]
+position = Vector2(765, 74)
+
+[node name="Node2D19" parent="Node2D/Ceiling4" instance=ExtResource("1_fheeb")]
+position = Vector2(893, 74)
+
+[node name="Node2D20" parent="Node2D/Ceiling4" instance=ExtResource("1_fheeb")]
+position = Vector2(1021, 74)
+
+[node name="Ceiling7" type="Node2D" parent="Node2D"]
+position = Vector2(2883, 867)
+rotation = -1.5708
+scale = Vector2(15.5157, -1.78466)
+
+[node name="Node2D12" parent="Node2D/Ceiling7" instance=ExtResource("1_fheeb")]
+position = Vector2(1, 71)
+
+[node name="Node2D13" parent="Node2D/Ceiling7" instance=ExtResource("1_fheeb")]
+position = Vector2(127, 71)
+
+[node name="Node2D14" parent="Node2D/Ceiling7" instance=ExtResource("1_fheeb")]
+position = Vector2(256, 72)
+
+[node name="Node2D15" parent="Node2D/Ceiling7" instance=ExtResource("1_fheeb")]
+position = Vector2(384, 73)
+
+[node name="Node2D16" parent="Node2D/Ceiling7" instance=ExtResource("1_fheeb")]
+position = Vector2(512, 74)
+
+[node name="Node2D17" parent="Node2D/Ceiling7" instance=ExtResource("1_fheeb")]
+position = Vector2(637, 74)
+
+[node name="Node2D18" parent="Node2D/Ceiling7" instance=ExtResource("1_fheeb")]
+position = Vector2(765, 74)
+
+[node name="Node2D19" parent="Node2D/Ceiling7" instance=ExtResource("1_fheeb")]
+position = Vector2(893, 74)
+
+[node name="Node2D20" parent="Node2D/Ceiling7" instance=ExtResource("1_fheeb")]
+position = Vector2(1021, 74)
+
+[node name="Ceiling5" type="Node2D" parent="Node2D"]
+position = Vector2(1571, -1863)
+
+[node name="Node2D12" parent="Node2D/Ceiling5" instance=ExtResource("1_fheeb")]
+position = Vector2(1, 71)
+
+[node name="Node2D13" parent="Node2D/Ceiling5" instance=ExtResource("1_fheeb")]
+position = Vector2(127, 71)
+
+[node name="Node2D14" parent="Node2D/Ceiling5" instance=ExtResource("1_fheeb")]
+position = Vector2(256, 72)
+
+[node name="Node2D15" parent="Node2D/Ceiling5" instance=ExtResource("1_fheeb")]
+position = Vector2(384, 73)
+
+[node name="Node2D16" parent="Node2D/Ceiling5" instance=ExtResource("1_fheeb")]
+position = Vector2(512, 74)
+
+[node name="Node2D17" parent="Node2D/Ceiling5" instance=ExtResource("1_fheeb")]
+position = Vector2(637, 74)
+
+[node name="Node2D18" parent="Node2D/Ceiling5" instance=ExtResource("1_fheeb")]
+position = Vector2(765, 74)
+
+[node name="Node2D19" parent="Node2D/Ceiling5" instance=ExtResource("1_fheeb")]
+position = Vector2(893, 74)
+
+[node name="Node2D20" parent="Node2D/Ceiling5" instance=ExtResource("1_fheeb")]
+position = Vector2(1021, 74)
+
+[node name="Ceiling6" type="Node2D" parent="Node2D"]
+position = Vector2(541, -2528)
+
+[node name="Node2D12" parent="Node2D/Ceiling6" instance=ExtResource("1_fheeb")]
+position = Vector2(1, 71)
+
+[node name="Node2D13" parent="Node2D/Ceiling6" instance=ExtResource("1_fheeb")]
+position = Vector2(127, 71)
+
+[node name="Node2D21" parent="Node2D/Ceiling6" instance=ExtResource("1_fheeb")]
+position = Vector2(127, 71)
+
+[node name="Node2D14" parent="Node2D/Ceiling6" instance=ExtResource("1_fheeb")]
+position = Vector2(256, 72)
+
+[node name="Node2D15" parent="Node2D/Ceiling6" instance=ExtResource("1_fheeb")]
+position = Vector2(384, 73)
+
+[node name="Node2D16" parent="Node2D/Ceiling6" instance=ExtResource("1_fheeb")]
+position = Vector2(512, 74)
+
+[node name="Node2D17" parent="Node2D/Ceiling6" instance=ExtResource("1_fheeb")]
+position = Vector2(637, 74)
+
+[node name="Node2D18" parent="Node2D/Ceiling6" instance=ExtResource("1_fheeb")]
+position = Vector2(765, 74)
+
+[node name="Node2D19" parent="Node2D/Ceiling6" instance=ExtResource("1_fheeb")]
+position = Vector2(893, 74)
+
+[node name="Node2D20" parent="Node2D/Ceiling6" instance=ExtResource("1_fheeb")]
+position = Vector2(1021, 74)
+
+[node name="Ceiling8" type="Node2D" parent="Node2D"]
+position = Vector2(-1009, -3739)
+
+[node name="Node2D12" parent="Node2D/Ceiling8" instance=ExtResource("1_fheeb")]
+position = Vector2(1, 71)
+
+[node name="Node2D13" parent="Node2D/Ceiling8" instance=ExtResource("1_fheeb")]
+position = Vector2(127, 71)
+
+[node name="Node2D21" parent="Node2D/Ceiling8" instance=ExtResource("1_fheeb")]
+position = Vector2(127, 71)
+
+[node name="Node2D14" parent="Node2D/Ceiling8" instance=ExtResource("1_fheeb")]
+position = Vector2(256, 72)
+
+[node name="Node2D15" parent="Node2D/Ceiling8" instance=ExtResource("1_fheeb")]
+position = Vector2(384, 73)
+
+[node name="Node2D16" parent="Node2D/Ceiling8" instance=ExtResource("1_fheeb")]
+position = Vector2(512, 74)
+
+[node name="Node2D17" parent="Node2D/Ceiling8" instance=ExtResource("1_fheeb")]
+position = Vector2(637, 74)
+
+[node name="Node2D18" parent="Node2D/Ceiling8" instance=ExtResource("1_fheeb")]
+position = Vector2(765, 74)
+
+[node name="Node2D19" parent="Node2D/Ceiling8" instance=ExtResource("1_fheeb")]
+position = Vector2(893, 74)
+
+[node name="Node2D20" parent="Node2D/Ceiling8" instance=ExtResource("1_fheeb")]
+position = Vector2(1021, 74)
+
+[node name="Ceiling9" type="Node2D" parent="Node2D"]
+position = Vector2(1638, -4486)
+
+[node name="Node2D12" parent="Node2D/Ceiling9" instance=ExtResource("1_fheeb")]
+position = Vector2(1, 71)
+
+[node name="Node2D13" parent="Node2D/Ceiling9" instance=ExtResource("1_fheeb")]
+position = Vector2(127, 71)
+
+[node name="Node2D21" parent="Node2D/Ceiling9" instance=ExtResource("1_fheeb")]
+position = Vector2(127, 71)
+
+[node name="Node2D14" parent="Node2D/Ceiling9" instance=ExtResource("1_fheeb")]
+position = Vector2(256, 72)
+
+[node name="Node2D15" parent="Node2D/Ceiling9" instance=ExtResource("1_fheeb")]
+position = Vector2(384, 73)
+
+[node name="Node2D16" parent="Node2D/Ceiling9" instance=ExtResource("1_fheeb")]
+position = Vector2(512, 74)
+
+[node name="Node2D17" parent="Node2D/Ceiling9" instance=ExtResource("1_fheeb")]
+position = Vector2(637, 74)
+
+[node name="Node2D18" parent="Node2D/Ceiling9" instance=ExtResource("1_fheeb")]
+position = Vector2(765, 74)
+
+[node name="Node2D19" parent="Node2D/Ceiling9" instance=ExtResource("1_fheeb")]
+position = Vector2(893, 74)
+
+[node name="Node2D20" parent="Node2D/Ceiling9" instance=ExtResource("1_fheeb")]
+position = Vector2(1021, 74)
+
+[node name="Ceiling10" type="Node2D" parent="Node2D"]
+position = Vector2(1638, -4486)
+
+[node name="Node2D12" parent="Node2D/Ceiling10" instance=ExtResource("1_fheeb")]
+position = Vector2(1, 71)
+
+[node name="Node2D13" parent="Node2D/Ceiling10" instance=ExtResource("1_fheeb")]
+position = Vector2(127, 71)
+
+[node name="Node2D21" parent="Node2D/Ceiling10" instance=ExtResource("1_fheeb")]
+position = Vector2(127, 71)
+
+[node name="Node2D14" parent="Node2D/Ceiling10" instance=ExtResource("1_fheeb")]
+position = Vector2(256, 72)
+
+[node name="Node2D15" parent="Node2D/Ceiling10" instance=ExtResource("1_fheeb")]
+position = Vector2(384, 73)
+
+[node name="Node2D16" parent="Node2D/Ceiling10" instance=ExtResource("1_fheeb")]
+position = Vector2(512, 74)
+
+[node name="Node2D17" parent="Node2D/Ceiling10" instance=ExtResource("1_fheeb")]
+position = Vector2(637, 74)
+
+[node name="Node2D18" parent="Node2D/Ceiling10" instance=ExtResource("1_fheeb")]
+position = Vector2(765, 74)
+
+[node name="Node2D19" parent="Node2D/Ceiling10" instance=ExtResource("1_fheeb")]
+position = Vector2(893, 74)
+
+[node name="Node2D20" parent="Node2D/Ceiling10" instance=ExtResource("1_fheeb")]
+position = Vector2(1021, 74)
+
+[node name="Ceiling11" type="Node2D" parent="Node2D"]
+position = Vector2(461, -5221)
+
+[node name="Node2D12" parent="Node2D/Ceiling11" instance=ExtResource("1_fheeb")]
+position = Vector2(1, 71)
+
+[node name="Node2D13" parent="Node2D/Ceiling11" instance=ExtResource("1_fheeb")]
+position = Vector2(127, 71)
+
+[node name="Node2D21" parent="Node2D/Ceiling11" instance=ExtResource("1_fheeb")]
+position = Vector2(127, 71)
+
+[node name="Node2D14" parent="Node2D/Ceiling11" instance=ExtResource("1_fheeb")]
+position = Vector2(256, 72)
+
+[node name="Node2D15" parent="Node2D/Ceiling11" instance=ExtResource("1_fheeb")]
+position = Vector2(384, 73)
+
+[node name="Node2D16" parent="Node2D/Ceiling11" instance=ExtResource("1_fheeb")]
+position = Vector2(512, 74)
+
+[node name="Node2D17" parent="Node2D/Ceiling11" instance=ExtResource("1_fheeb")]
+position = Vector2(637, 74)
+
+[node name="Node2D18" parent="Node2D/Ceiling11" instance=ExtResource("1_fheeb")]
+position = Vector2(765, 74)
+
+[node name="Node2D19" parent="Node2D/Ceiling11" instance=ExtResource("1_fheeb")]
+position = Vector2(893, 74)
+
+[node name="Node2D20" parent="Node2D/Ceiling11" instance=ExtResource("1_fheeb")]
+position = Vector2(1021, 74)
+
+[node name="Node2D2" type="Node2D" parent="."]
+position = Vector2(0, -9775)
+
+[node name="Ceiling2" type="Node2D" parent="Node2D2"]
+position = Vector2(458, -79)
+
+[node name="Node2D12" parent="Node2D2/Ceiling2" instance=ExtResource("1_fheeb")]
+position = Vector2(1, 71)
+
+[node name="Node2D13" parent="Node2D2/Ceiling2" instance=ExtResource("1_fheeb")]
+position = Vector2(127, 71)
+
+[node name="Node2D14" parent="Node2D2/Ceiling2" instance=ExtResource("1_fheeb")]
+position = Vector2(256, 72)
+
+[node name="Node2D15" parent="Node2D2/Ceiling2" instance=ExtResource("1_fheeb")]
+position = Vector2(384, 73)
+
+[node name="Node2D16" parent="Node2D2/Ceiling2" instance=ExtResource("1_fheeb")]
+position = Vector2(512, 74)
+
+[node name="Node2D17" parent="Node2D2/Ceiling2" instance=ExtResource("1_fheeb")]
+position = Vector2(637, 74)
+
+[node name="Node2D18" parent="Node2D2/Ceiling2" instance=ExtResource("1_fheeb")]
+position = Vector2(765, 74)
+
+[node name="Node2D19" parent="Node2D2/Ceiling2" instance=ExtResource("1_fheeb")]
+position = Vector2(893, 74)
+
+[node name="Node2D20" parent="Node2D2/Ceiling2" instance=ExtResource("1_fheeb")]
+position = Vector2(1021, 74)
+
+[node name="Ceiling3" type="Node2D" parent="Node2D2"]
+position = Vector2(-933, -804)
+
+[node name="Node2D12" parent="Node2D2/Ceiling3" instance=ExtResource("1_fheeb")]
+position = Vector2(1, 71)
+
+[node name="Node2D13" parent="Node2D2/Ceiling3" instance=ExtResource("1_fheeb")]
+position = Vector2(127, 71)
+
+[node name="Node2D14" parent="Node2D2/Ceiling3" instance=ExtResource("1_fheeb")]
+position = Vector2(256, 72)
+
+[node name="Node2D15" parent="Node2D2/Ceiling3" instance=ExtResource("1_fheeb")]
+position = Vector2(384, 73)
+
+[node name="Node2D16" parent="Node2D2/Ceiling3" instance=ExtResource("1_fheeb")]
+position = Vector2(512, 74)
+
+[node name="Node2D17" parent="Node2D2/Ceiling3" instance=ExtResource("1_fheeb")]
+position = Vector2(637, 74)
+
+[node name="Node2D18" parent="Node2D2/Ceiling3" instance=ExtResource("1_fheeb")]
+position = Vector2(765, 74)
+
+[node name="Node2D19" parent="Node2D2/Ceiling3" instance=ExtResource("1_fheeb")]
+position = Vector2(893, 74)
+
+[node name="Node2D20" parent="Node2D2/Ceiling3" instance=ExtResource("1_fheeb")]
+position = Vector2(1021, 74)
+
+[node name="Ceiling4" type="Node2D" parent="Node2D2"]
+position = Vector2(-909, 774)
+rotation = -1.5708
+scale = Vector2(15.5157, -1.78466)
+
+[node name="Node2D12" parent="Node2D2/Ceiling4" instance=ExtResource("1_fheeb")]
+position = Vector2(1, 71)
+
+[node name="Node2D13" parent="Node2D2/Ceiling4" instance=ExtResource("1_fheeb")]
+position = Vector2(127, 71)
+
+[node name="Node2D14" parent="Node2D2/Ceiling4" instance=ExtResource("1_fheeb")]
+position = Vector2(256, 72)
+
+[node name="Node2D15" parent="Node2D2/Ceiling4" instance=ExtResource("1_fheeb")]
+position = Vector2(384, 73)
+
+[node name="Node2D16" parent="Node2D2/Ceiling4" instance=ExtResource("1_fheeb")]
+position = Vector2(512, 74)
+
+[node name="Node2D17" parent="Node2D2/Ceiling4" instance=ExtResource("1_fheeb")]
+position = Vector2(637, 74)
+
+[node name="Node2D18" parent="Node2D2/Ceiling4" instance=ExtResource("1_fheeb")]
+position = Vector2(765, 74)
+
+[node name="Node2D19" parent="Node2D2/Ceiling4" instance=ExtResource("1_fheeb")]
+position = Vector2(893, 74)
+
+[node name="Node2D20" parent="Node2D2/Ceiling4" instance=ExtResource("1_fheeb")]
+position = Vector2(1021, 74)
+
+[node name="Ceiling7" type="Node2D" parent="Node2D2"]
+position = Vector2(2883, 867)
+rotation = -1.5708
+scale = Vector2(15.5157, -1.78466)
+
+[node name="Node2D12" parent="Node2D2/Ceiling7" instance=ExtResource("1_fheeb")]
+position = Vector2(1, 71)
+
+[node name="Node2D13" parent="Node2D2/Ceiling7" instance=ExtResource("1_fheeb")]
+position = Vector2(127, 71)
+
+[node name="Node2D14" parent="Node2D2/Ceiling7" instance=ExtResource("1_fheeb")]
+position = Vector2(256, 72)
+
+[node name="Node2D15" parent="Node2D2/Ceiling7" instance=ExtResource("1_fheeb")]
+position = Vector2(384, 73)
+
+[node name="Node2D16" parent="Node2D2/Ceiling7" instance=ExtResource("1_fheeb")]
+position = Vector2(512, 74)
+
+[node name="Node2D17" parent="Node2D2/Ceiling7" instance=ExtResource("1_fheeb")]
+position = Vector2(637, 74)
+
+[node name="Node2D18" parent="Node2D2/Ceiling7" instance=ExtResource("1_fheeb")]
+position = Vector2(765, 74)
+
+[node name="Node2D19" parent="Node2D2/Ceiling7" instance=ExtResource("1_fheeb")]
+position = Vector2(893, 74)
+
+[node name="Node2D20" parent="Node2D2/Ceiling7" instance=ExtResource("1_fheeb")]
+position = Vector2(1021, 74)
+
+[node name="Ceiling5" type="Node2D" parent="Node2D2"]
+position = Vector2(1571, -1863)
+
+[node name="Node2D12" parent="Node2D2/Ceiling5" instance=ExtResource("1_fheeb")]
+position = Vector2(1, 71)
+
+[node name="Node2D13" parent="Node2D2/Ceiling5" instance=ExtResource("1_fheeb")]
+position = Vector2(127, 71)
+
+[node name="Node2D14" parent="Node2D2/Ceiling5" instance=ExtResource("1_fheeb")]
+position = Vector2(256, 72)
+
+[node name="Node2D15" parent="Node2D2/Ceiling5" instance=ExtResource("1_fheeb")]
+position = Vector2(384, 73)
+
+[node name="Node2D16" parent="Node2D2/Ceiling5" instance=ExtResource("1_fheeb")]
+position = Vector2(512, 74)
+
+[node name="Node2D17" parent="Node2D2/Ceiling5" instance=ExtResource("1_fheeb")]
+position = Vector2(637, 74)
+
+[node name="Node2D18" parent="Node2D2/Ceiling5" instance=ExtResource("1_fheeb")]
+position = Vector2(765, 74)
+
+[node name="Node2D19" parent="Node2D2/Ceiling5" instance=ExtResource("1_fheeb")]
+position = Vector2(893, 74)
+
+[node name="Node2D20" parent="Node2D2/Ceiling5" instance=ExtResource("1_fheeb")]
+position = Vector2(1021, 74)
+
+[node name="Ceiling6" type="Node2D" parent="Node2D2"]
+position = Vector2(541, -2528)
+
+[node name="Node2D12" parent="Node2D2/Ceiling6" instance=ExtResource("1_fheeb")]
+position = Vector2(1, 71)
+
+[node name="Node2D13" parent="Node2D2/Ceiling6" instance=ExtResource("1_fheeb")]
+position = Vector2(127, 71)
+
+[node name="Node2D21" parent="Node2D2/Ceiling6" instance=ExtResource("1_fheeb")]
+position = Vector2(127, 71)
+
+[node name="Node2D14" parent="Node2D2/Ceiling6" instance=ExtResource("1_fheeb")]
+position = Vector2(256, 72)
+
+[node name="Node2D15" parent="Node2D2/Ceiling6" instance=ExtResource("1_fheeb")]
+position = Vector2(384, 73)
+
+[node name="Node2D16" parent="Node2D2/Ceiling6" instance=ExtResource("1_fheeb")]
+position = Vector2(512, 74)
+
+[node name="Node2D17" parent="Node2D2/Ceiling6" instance=ExtResource("1_fheeb")]
+position = Vector2(637, 74)
+
+[node name="Node2D18" parent="Node2D2/Ceiling6" instance=ExtResource("1_fheeb")]
+position = Vector2(765, 74)
+
+[node name="Node2D19" parent="Node2D2/Ceiling6" instance=ExtResource("1_fheeb")]
+position = Vector2(893, 74)
+
+[node name="Node2D20" parent="Node2D2/Ceiling6" instance=ExtResource("1_fheeb")]
+position = Vector2(1021, 74)
+
+[node name="Ceiling8" type="Node2D" parent="Node2D2"]
+position = Vector2(-1009, -3739)
+
+[node name="Node2D12" parent="Node2D2/Ceiling8" instance=ExtResource("1_fheeb")]
+position = Vector2(1, 71)
+
+[node name="Node2D13" parent="Node2D2/Ceiling8" instance=ExtResource("1_fheeb")]
+position = Vector2(127, 71)
+
+[node name="Node2D21" parent="Node2D2/Ceiling8" instance=ExtResource("1_fheeb")]
+position = Vector2(127, 71)
+
+[node name="Node2D14" parent="Node2D2/Ceiling8" instance=ExtResource("1_fheeb")]
+position = Vector2(256, 72)
+
+[node name="Node2D15" parent="Node2D2/Ceiling8" instance=ExtResource("1_fheeb")]
+position = Vector2(384, 73)
+
+[node name="Node2D16" parent="Node2D2/Ceiling8" instance=ExtResource("1_fheeb")]
+position = Vector2(512, 74)
+
+[node name="Node2D17" parent="Node2D2/Ceiling8" instance=ExtResource("1_fheeb")]
+position = Vector2(637, 74)
+
+[node name="Node2D18" parent="Node2D2/Ceiling8" instance=ExtResource("1_fheeb")]
+position = Vector2(765, 74)
+
+[node name="Node2D19" parent="Node2D2/Ceiling8" instance=ExtResource("1_fheeb")]
+position = Vector2(893, 74)
+
+[node name="Node2D20" parent="Node2D2/Ceiling8" instance=ExtResource("1_fheeb")]
+position = Vector2(1021, 74)
+
+[node name="Ceiling9" type="Node2D" parent="Node2D2"]
+position = Vector2(1638, -4486)
+
+[node name="Node2D12" parent="Node2D2/Ceiling9" instance=ExtResource("1_fheeb")]
+position = Vector2(1, 71)
+
+[node name="Node2D13" parent="Node2D2/Ceiling9" instance=ExtResource("1_fheeb")]
+position = Vector2(127, 71)
+
+[node name="Node2D21" parent="Node2D2/Ceiling9" instance=ExtResource("1_fheeb")]
+position = Vector2(127, 71)
+
+[node name="Node2D14" parent="Node2D2/Ceiling9" instance=ExtResource("1_fheeb")]
+position = Vector2(256, 72)
+
+[node name="Node2D15" parent="Node2D2/Ceiling9" instance=ExtResource("1_fheeb")]
+position = Vector2(384, 73)
+
+[node name="Node2D16" parent="Node2D2/Ceiling9" instance=ExtResource("1_fheeb")]
+position = Vector2(512, 74)
+
+[node name="Node2D17" parent="Node2D2/Ceiling9" instance=ExtResource("1_fheeb")]
+position = Vector2(637, 74)
+
+[node name="Node2D18" parent="Node2D2/Ceiling9" instance=ExtResource("1_fheeb")]
+position = Vector2(765, 74)
+
+[node name="Node2D19" parent="Node2D2/Ceiling9" instance=ExtResource("1_fheeb")]
+position = Vector2(893, 74)
+
+[node name="Node2D20" parent="Node2D2/Ceiling9" instance=ExtResource("1_fheeb")]
+position = Vector2(1021, 74)
+
+[node name="Ceiling10" type="Node2D" parent="Node2D2"]
+position = Vector2(1638, -4486)
+
+[node name="Node2D12" parent="Node2D2/Ceiling10" instance=ExtResource("1_fheeb")]
+position = Vector2(1, 71)
+
+[node name="Node2D13" parent="Node2D2/Ceiling10" instance=ExtResource("1_fheeb")]
+position = Vector2(127, 71)
+
+[node name="Node2D21" parent="Node2D2/Ceiling10" instance=ExtResource("1_fheeb")]
+position = Vector2(127, 71)
+
+[node name="Node2D14" parent="Node2D2/Ceiling10" instance=ExtResource("1_fheeb")]
+position = Vector2(256, 72)
+
+[node name="Node2D15" parent="Node2D2/Ceiling10" instance=ExtResource("1_fheeb")]
+position = Vector2(384, 73)
+
+[node name="Node2D16" parent="Node2D2/Ceiling10" instance=ExtResource("1_fheeb")]
+position = Vector2(512, 74)
+
+[node name="Node2D17" parent="Node2D2/Ceiling10" instance=ExtResource("1_fheeb")]
+position = Vector2(637, 74)
+
+[node name="Node2D18" parent="Node2D2/Ceiling10" instance=ExtResource("1_fheeb")]
+position = Vector2(765, 74)
+
+[node name="Node2D19" parent="Node2D2/Ceiling10" instance=ExtResource("1_fheeb")]
+position = Vector2(893, 74)
+
+[node name="Node2D20" parent="Node2D2/Ceiling10" instance=ExtResource("1_fheeb")]
+position = Vector2(1021, 74)
+
+[node name="Ceiling11" type="Node2D" parent="Node2D2"]
+position = Vector2(461, -5221)
+
+[node name="Node2D12" parent="Node2D2/Ceiling11" instance=ExtResource("1_fheeb")]
+position = Vector2(1, 71)
+
+[node name="Node2D13" parent="Node2D2/Ceiling11" instance=ExtResource("1_fheeb")]
+position = Vector2(127, 71)
+
+[node name="Node2D21" parent="Node2D2/Ceiling11" instance=ExtResource("1_fheeb")]
+position = Vector2(127, 71)
+
+[node name="Node2D14" parent="Node2D2/Ceiling11" instance=ExtResource("1_fheeb")]
+position = Vector2(256, 72)
+
+[node name="Node2D15" parent="Node2D2/Ceiling11" instance=ExtResource("1_fheeb")]
+position = Vector2(384, 73)
+
+[node name="Node2D16" parent="Node2D2/Ceiling11" instance=ExtResource("1_fheeb")]
+position = Vector2(512, 74)
+
+[node name="Node2D17" parent="Node2D2/Ceiling11" instance=ExtResource("1_fheeb")]
+position = Vector2(637, 74)
+
+[node name="Node2D18" parent="Node2D2/Ceiling11" instance=ExtResource("1_fheeb")]
+position = Vector2(765, 74)
+
+[node name="Node2D19" parent="Node2D2/Ceiling11" instance=ExtResource("1_fheeb")]
+position = Vector2(893, 74)
+
+[node name="Node2D20" parent="Node2D2/Ceiling11" instance=ExtResource("1_fheeb")]
+position = Vector2(1021, 74)
