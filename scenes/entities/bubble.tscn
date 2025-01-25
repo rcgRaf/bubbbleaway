@@ -185,10 +185,27 @@ debug_color = Color(0.0293711, 0.585475, 0.772792, 0.42)
 scale = Vector2(0.175, 0.175)
 texture = ExtResource("2_5gg48")
 
+[node name="CPUParticles2D" type="CPUParticles2D" parent="BubbleCollisionShape"]
+position = Vector2(0, 49)
+emitting = false
+lifetime = 0.5
+texture = ExtResource("2_5gg48")
+direction = Vector2(0, -1)
+spread = 90.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 5.0
+initial_velocity_max = 30.0
+damping_min = 0.5
+damping_max = 5.0
+angle_min = -30.0
+angle_max = 30.0
+scale_amount_min = 0.01
+scale_amount_max = 0.05
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(4, -4)
 sprite_frames = SubResource("SpriteFrames_yjose")
-frame_progress = 0.508541
+frame_progress = 0.529492
 
 [node name="player_sprite" type="Sprite2D" parent="."]
 
