@@ -46,11 +46,18 @@ func handle_bubble_scale(delta):
 			curr_scale = TARGET_SCALE  # Snap to target scale
 			is_scaling_up = false
 	else:
-		if curr_scale > ORIGINAL_SCALE:
-			var multiplier = 1.0 / (ORIGINAL_SCALE.distance_to(curr_scale) / ORIGINAL_SCALE.distance_to(MAX_SCALE))
-			curr_scale = curr_scale.lerp(ORIGINAL_SCALE, SCALE_SPEED * delta * multiplier)
+		if curr_scale > MIN_SCALE:
+			var scaleRatioX = (MAX_SCALE.x - curr_scale.x) / (MAX_SCALE.x - MIN_SCALE.x)
+			var scaleRatioY = (MAX_SCALE.y - curr_scale.y) / (MAX_SCALE.y - MIN_SCALE.y)
+			var curveCurrentPointX = blowdown_curve.sample(scaleRatioX)
+			var curveCurrentPointY = blowdown_curve.sample(scaleRatioY)
+			var curvePointX = blowdown_curve.sample(scaleRatioX+delta)
+			var curvePointY = blowdown_curve.sample(scaleRatioY+delta)
+			var diffX = curveCurrentPointX-curvePointX
+			var diffY = curveCurrentPointY-curvePointY
+			curr_scale = Vector2(curr_scale.x-diffX*0.1,curr_scale.y-diffY*0.1)
 		else:
-			curr_scale = ORIGINAL_SCALE  # Snap to original scale
+			curr_scale = MIN_SCALE  # Snap to original scale
 	set_bubble_scale(curr_scale)
 
 func get_bubble_scale() -> Vector2:
