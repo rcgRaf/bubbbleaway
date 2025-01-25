@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
-@onready var collision_shape = $BubbleCollisionShape
+@onready var collision_shape := $BubbleCollisionShape
+@onready var bubble_particles := $BubbleCollisionShape/CPUParticles2D
 
 @export var num : float
 @export var blowdown_curve: Curve
@@ -41,16 +42,19 @@ func handle_bubble_scale(delta):
 	
 	var curr_scale = get_bubble_scale()
 	if is_scaling_up:
+		bubble_particles.set_emitting(false)
 		curr_scale = curr_scale.slerp(TARGET_SCALE, SCALE_SPEED * delta)
 		if curr_scale.distance_to(TARGET_SCALE) < 0.01:
 			curr_scale = TARGET_SCALE  # Snap to target scale
 			is_scaling_up = false
 	else:
+		bubble_particles.set_emitting(true)
 		if curr_scale > ORIGINAL_SCALE:
 			var multiplier = 1.0 / (ORIGINAL_SCALE.distance_to(curr_scale) / ORIGINAL_SCALE.distance_to(MAX_SCALE))
 			curr_scale = curr_scale.lerp(ORIGINAL_SCALE, SCALE_SPEED * delta * multiplier)
 		else:
 			curr_scale = ORIGINAL_SCALE  # Snap to original scale
+			bubble_particles.set_emitting(false)
 	set_bubble_scale(curr_scale)
 
 func get_bubble_scale() -> Vector2:
