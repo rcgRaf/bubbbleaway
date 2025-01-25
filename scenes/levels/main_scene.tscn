@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bbwdrl2v6xq4g" path="res://scenes/environment/walls.tscn" id="1_fheeb"]
 [ext_resource type="PackedScene" uid="uid://ksvvqbt444m" path="res://scenes/entities/bubble.tscn" id="2_dk1o0"]
+[ext_resource type="PackedScene" uid="uid://ckqfaknwkyly6" path="res://scenes/environment/obstacle.tscn" id="3_x8s2f"]
 
 [sub_resource type="Curve" id="Curve_wf4hs"]
 min_value = 0.1
@@ -719,3 +720,8 @@ position = Vector2(893, 74)
 
 [node name="Node2D20" parent="Node2D2/Ceiling11" instance=ExtResource("1_fheeb")]
 position = Vector2(1021, 74)
+
+[node name="Obstacles" type="Node2D" parent="."]
+
+[node name="test obstacle" parent="Obstacles" instance=ExtResource("3_x8s2f")]
+position = Vector2(727, -1105)

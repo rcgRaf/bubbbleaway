@@ -1,4 +1,5 @@
 extends CharacterBody2D
+class_name PlayerController
 
 @onready var collision_shape := $BubbleCollisionShape
 @onready var bubble_particles := $BubbleCollisionShape/CPUParticles2D
