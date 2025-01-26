@@ -73,7 +73,7 @@ var is_looking_right = true
 
 
 func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("ui_accept"):
+	if Input.is_action_just_pressed("ui_accept") or Input.is_action_just_pressed("ui_up"):
 		heal(1)
 	elif Input.is_action_just_pressed("ui_down"):
 		take_damage(1)
