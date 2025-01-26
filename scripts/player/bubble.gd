@@ -63,11 +63,8 @@ const ORIGINAL_SCALE_SPEED = 2.0
 @onready var MIN_SCALE = ORIGINAL_SCALE * 0.3 #Vector2(1.0, 1.0) * 0.3
 @onready var MAX_SCALE = ORIGINAL_SCALE * 3 #Vector2(1.0, 1.0) * 5  # Original scale of the object
 
-const ORIGINAL_SCALE_SPEED = 2.0
 const SCALE_SPEED = 0.1  # Speed of scaling
 const DEFLATE_SPEED = 0.7  # Speed of scaling
-const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
 var DISPLACE_DELTA = Vector2(0,0)
 var TARGET_SCALE = scale  # Target scale when key is pressed
 var is_scaling_up = false  # Whether the object is scaling up
