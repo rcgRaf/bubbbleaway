@@ -6,8 +6,6 @@ class_name PlayerController
 @export var num : float
 @export var blowdown_curve: Curve
 
-<<<<<<< HEAD
-=======
 var health = 1
 const max_health = 10
 
@@ -61,7 +59,6 @@ func handle_squish_animation(delta):
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 const ORIGINAL_SCALE_SPEED = 2.0
->>>>>>> 551371fd9b834e473a65e97c80a80452646157af
 @onready var ORIGINAL_SCALE = get_bubble_scale() # Vector2(1.0, 1.0)  # Original scale of the object
 @onready var MIN_SCALE = ORIGINAL_SCALE * 0.3 #Vector2(1.0, 1.0) * 0.3
 @onready var MAX_SCALE = ORIGINAL_SCALE * 3 #Vector2(1.0, 1.0) * 5  # Original scale of the object
@@ -99,13 +96,8 @@ func _physics_process(delta: float) -> void:
 	handle_horizontal_movement()
 	#handle_bubble_scale(delta)
 	
-<<<<<<< HEAD
-	upwards_force = get_bubble_scale().length()
-	velocity.y -= upwards_force * 5
-=======
 	upwards_force = (health - 5) # get_bubble_scale().length() - 5.0
 	velocity.y -= upwards_force * 10
->>>>>>> 551371fd9b834e473a65e97c80a80452646157af
 	
 	var collision_info = move_and_collide(velocity * delta)
 	if collision_info:
