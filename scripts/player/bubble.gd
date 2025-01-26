@@ -32,11 +32,11 @@ func die():
 
 @onready var bubble:= $BubbleCollisionShape # $AnimatedSprite2D
 @onready var bubble_sprite := $BubbleCollisionShape/bubble_sprite
-#@onready var character_anim_sprite:= $AnimatedSprite2D
+@onready var character_anim_sprite:= $AnimatedSprite2D
 @export var animation_curve: Curve
 @onready var DEFAULT_SCALE: Vector2 = bubble.scale
 @onready var SQUISH_SCALE: Vector2 = DEFAULT_SCALE * 2.0
-const ANIMATION_DURATION := 0.5
+const ANIMATION_DURATION := 1.0
 var animation_time_passed := 0.0
 var is_animating := false
 
@@ -45,11 +45,9 @@ func start_squish_animation():
 	animation_time_passed = 0.0
 	DEFAULT_SCALE = bubble.scale
 	SQUISH_SCALE = Vector2(1,1) * health * 0.5
-	bubble_sprite.material.set_shader_parameter("amplitude_y", 60.0)
-	bubble_sprite.material.set_shader_parameter("amplitude_x", 60.0)
 	
 
-func play_squish_animation(delta):
+func handle_squish_animation(delta):
 	if is_animating:
 		animation_time_passed += delta
 		bubble.scale = DEFAULT_SCALE.lerp(SQUISH_SCALE, animation_curve.sample(animation_time_passed / ANIMATION_DURATION))
@@ -57,8 +55,6 @@ func play_squish_animation(delta):
 		if animation_time_passed >= ANIMATION_DURATION:
 			animation_time_passed = 0.0
 			is_animating = false
-			bubble_sprite.material.set_shader_parameter("amplitude_y", 20.0)
-			bubble_sprite.material.set_shader_parameter("amplitude_x", 20.0)
 
 
 const SPEED = 300.0
@@ -77,15 +73,15 @@ var is_looking_right = true
 
 
 func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("ui_up"):
+	if Input.is_action_just_pressed("ui_accept"):
 		heal(1)
 	elif Input.is_action_just_pressed("ui_down"):
 		take_damage(1)
 		
 	#if Input.is_action_just_pressed("ui_accept"):
 		#start_squish_animation()
-	play_squish_animation(delta)
-	#character_anim_sprite.flip_h = false if is_looking_right else true
+	handle_squish_animation(delta)
+	character_anim_sprite.flip_h = false if is_looking_right else true
 
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
